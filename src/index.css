@@ -1,3 +1,90 @@
+@font-face {
+	font-family: 'Pangolin';
+	src: url('./fonts/Pangolin/Pangolin-Regular.ttf');
+}
+:root {
+	--lightest: rgb(216, 206, 194);
+	--darkest: rgb(60, 40, 20);
+}
+html {
+	background: var(--lightest);
+	color: var(--darkest);
+	font-family: sans-serif;
+	text-align: center;
+}
 body {
   margin: 0;
+}
+.App {
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 1fr;
+	justify-content: center;
+}
+header {
+	background-color: var(--darkest);
+	color: var(--lightest);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+h1 {
+	font-family: 'Pangolin';
+	font-size: 32px;
+	font-weight: 100;
+	margin: 16px;
+}
+main {
+	margin-top: 16px;
+}
+main img {
+	width: 90%;
+}
+main nav {
+	display: flex;
+	justify-content: center;
+	height: 40px;
+	padding: 16px;
+}
+nav button {
+	width: 48px;
+	border: 3px outset white;
+	border-radius: 10%;
+	cursor: pointer;
+}
+nav button:active {
+	border: 3px inset white;
+	background-color: rgb(92, 92, 92);
+}
+nav .nav-left {
+	background: url('./icons/arrow-left.svg');
+	background-size: cover;
+	background-color: white;
+}
+nav .nav-right {
+	background: url('./icons/arrow-right.svg');
+	background-size: cover;
+	background-color: white;
+}
+nav .nav-display {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 72px;
+	font-size: 20px;
+}
+footer {
+	background-color: var(--darkest);
+	padding: 16px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+footer a {
+	color: black;
+	font-size: 10px;
+	text-decoration: none;
+}
+footer a:hover {
+	color: var(--lightest);
 }
